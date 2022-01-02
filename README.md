@@ -10,6 +10,8 @@ We reviewed topics like:
 
 - [x] Mocha Structure
 - [x] First Test: Async/Await first commands
+- [x] Page Object Model 
+- [x] Selenium-standalone-service
  
 - ## 💻 Pre-requisites
 
