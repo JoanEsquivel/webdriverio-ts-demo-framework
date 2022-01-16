@@ -9,6 +9,7 @@
 We reviewed topics like:
 
 - [x] Mocha Structure
+- [x] Web Locators
 - [x] First Test: Async/Await first commands
 - [x] Page Object Model 
 - [x] Selenium-standalone-service
