@@ -12,7 +12,7 @@ describe('Locators - Test Scenarios',async ()=>{
         createdLink.scrollIntoView()
         createdLink.click()
         linkResponse.scrollIntoView()
-        await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus 201 and status text Created')
+        await expect(linkResponse).toHaveTextContaining('Link has responded with staus 201 and status text Created')
         
     })
 
@@ -24,7 +24,7 @@ describe('Locators - Test Scenarios',async ()=>{
         unauthorizedLink.scrollIntoView()
         unauthorizedLink.click()
         linkResponse.scrollIntoView()
-        await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus 401 and status text Unauthorized')
+        await expect(linkResponse).toHaveTextContaining('Link has responded with staus 401 and status text Unauthorized')
     })
 
     it('Link Text(=) example', async () => {
@@ -37,7 +37,7 @@ describe('Locators - Test Scenarios',async ()=>{
         noContentLink.scrollIntoView()
         noContentLink.click()
         linkResponse.scrollIntoView()
-        await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus 204 and status text No Content')
+        await expect(linkResponse).toHaveTextContaining('Link has responded with staus 204 and status text No Content')
     })
 
     it('Partial Link Text(*=) example', async () => {
@@ -50,7 +50,7 @@ describe('Locators - Test Scenarios',async ()=>{
         badRequestLink.click()
 
         linkResponse.scrollIntoView()
-        await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus 400 and status text Bad Request')
+        await expect(linkResponse).toHaveTextContaining('Link has responded with staus 400 and status text Bad Request')
     })
 
     it('Element with certain text(<element>={text}) example', async () => {
@@ -63,7 +63,7 @@ describe('Locators - Test Scenarios',async ()=>{
         forbiddenLink.click()
 
         linkResponse.scrollIntoView()
-        await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus 403 and status text Forbidden')
+        await expect(linkResponse).toHaveTextContaining('Link has responded with staus 403 and status text Forbidden')
     })
 
     it('Element with patial text(<element>*={text}) example', async () => {
@@ -76,7 +76,7 @@ describe('Locators - Test Scenarios',async ()=>{
         movedLink.click()
         
         linkResponse.scrollIntoView()
-        await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus 301 and status text Moved Permanently')
+        await expect(linkResponse).toHaveTextContaining('Link has responded with staus 301 and status text Moved Permanently')
     })
 
     it('Element with patial text(<element>*={text}) example', async () => {
@@ -90,7 +90,7 @@ describe('Locators - Test Scenarios',async ()=>{
         movedLink.click()
 
         linkResponse.scrollIntoView()
-        await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus 301 and status text Moved Permanently')
+        await expect(linkResponse).toHaveTextContaining('Link has responded with staus 301 and status text Moved Permanently')
     })
 
     it('Element with xpath example', async () => {
@@ -103,7 +103,7 @@ describe('Locators - Test Scenarios',async ()=>{
         notFoundLink.click()
 
         linkResponse.scrollIntoView()
-        await expect(linkResponse.getText()).toHaveTextContaining('Link has responded with staus 404 and status text Not Found')
+        await expect(linkResponse).toHaveTextContaining('Link has responded with staus 404 and status text Not Found')
     })
 
 })
