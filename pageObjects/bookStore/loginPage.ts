@@ -33,7 +33,7 @@ class LoginPage extends bookStoreBasePage{
     /**
      * overwrite specific options to adapt it to page object
      */
-     public open(): Promise<string> {
+     public async open(): Promise<string> {
         return super.open('login');
     }
 }

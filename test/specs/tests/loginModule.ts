@@ -16,7 +16,6 @@ describe('Login Module Test Suite', () => {
 
     it('should not login', async() =>{
         loginPage.login('joanmedia', 'Test1234**')
-        await expect(loginPage.usernameLabel).toHaveTextContaining('joanmedia')
         await expect(loginPage.usernameLabel).not.toBeDisplayed()
     })
 })
