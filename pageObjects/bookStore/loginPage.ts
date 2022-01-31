@@ -27,6 +27,7 @@ class LoginPage extends bookStoreBasePage{
      public async login (username: string, password: string): Promise<void> {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
+        await this.btnLogin.scrollIntoView();
         await this.btnLogin.click();
     }
 

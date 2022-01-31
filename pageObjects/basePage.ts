@@ -8,6 +8,7 @@ export default class basePage {
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
     public async open(path: string): Promise<string> {
+        await browser.maximizeWindow()
         return browser.url(`https://demoqa.com/${path}`)
     }
 }
