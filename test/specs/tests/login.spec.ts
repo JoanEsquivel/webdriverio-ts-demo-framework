@@ -7,6 +7,6 @@ describe('Login Test Scenarios', ()=>{
         await $('#login-button').click()
 
         await expect($('.title')).toBeExisting()
-        await expect($('.title')).toHaveTextContaining('test')
+        await expect($('.title')).toHaveTextContaining('PRODUCTS')
     })
 })

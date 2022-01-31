@@ -21,7 +21,7 @@ export const config: WebdriverIO.Config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/loginModule.ts'
+        './test/specs/**/*.spec.ts'
     ],
     // Patterns to exclude.
     exclude: [
@@ -50,17 +50,34 @@ export const config: WebdriverIO.Config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [
-    //     {
+        {
+
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instances available you can make sure that not more than
+        // 5 instances get started at a time.
+        maxInstances: 1,
+        //
+        browserName: 'chrome',
+        // 'goog:chromeOptions': {
+        //     args: ['--headless']
+        // },
+        acceptInsecureCerts: true
+        // If outputDir is provided WebdriverIO can capture driver session logs
+        // it is possible to configure which logTypes to include/exclude.
+        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        // excludeDriverLogs: ['bugreport', 'server'],
+    },
+    // {
 
     //     // maxInstances can get overwritten per capability. So if you have an in-house Selenium
     //     // grid with only 5 firefox instances available you can make sure that not more than
     //     // 5 instances get started at a time.
     //     maxInstances: 1,
     //     //
-    //     browserName: 'chrome',
-    //     'goog:chromeOptions': {
-    //         args: ['--headless']
-    //     },
+    //     browserName: 'firefox',
+    //     // 'moz:firefoxOptions': {
+    //     //     args: ['-headless']
+    //     // },
     //     acceptInsecureCerts: true
     //     // If outputDir is provided WebdriverIO can capture driver session logs
     //     // it is possible to configure which logTypes to include/exclude.
@@ -74,7 +91,7 @@ export const config: WebdriverIO.Config = {
     //     // 5 instances get started at a time.
     //     maxInstances: 1,
     //     //
-    //     browserName: 'firefox',
+    //     browserName: 'MicrosoftEdge',
     //     'moz:firefoxOptions': {
     //         args: ['-headless']
     //     },
@@ -83,24 +100,8 @@ export const config: WebdriverIO.Config = {
     //     // it is possible to configure which logTypes to include/exclude.
     //     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
     //     // excludeDriverLogs: ['bugreport', 'server'],
-    // },
-    {
-
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 1,
-        //
-        browserName: 'MicrosoftEdge',
-        'moz:firefoxOptions': {
-            args: ['-headless']
-        },
-        acceptInsecureCerts: true
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+    // }
+],
     //
     // ===================
     // Test Configurations
@@ -159,7 +160,7 @@ export const config: WebdriverIO.Config = {
     framework: 'mocha',
     //
     // The number of times to retry the entire specfile when it fails as a whole
-    // specFileRetries: 1,
+    specFileRetries: 3,
     //
     // Delay in seconds between the spec file retry attempts
     // specFileRetriesDelay: 0,

@@ -18,6 +18,7 @@ export default class bookStoreBasePage extends basePage{
     }
 
     public async clickLogout(): Promise<void> {
+        await this.logoutButton.scrollIntoView()
         await this.logoutButton.click()
     }
 }
