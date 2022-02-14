@@ -1,0 +1,62 @@
+{
+  "uid" : "3c7f7c9e4b1c01aa",
+  "name" : "should login",
+  "fullName" : "Login Module Test Suite.should login",
+  "historyId" : "f900e0b798cc1a6897d6958f88f3c7f6",
+  "time" : {
+    "start" : 1644805762493,
+    "stop" : 1644805771770,
+    "duration" : 9277
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "1-0"
+  }, {
+    "name" : "suite",
+    "value" : "Login Module Test Suite"
+  }, {
+    "name" : "testClass",
+    "value" : "Login Module Test Suite"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login"
+  }, {
+    "name" : "package",
+    "value" : "Login Module Test Suite"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "firefox-96.0.3"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3c7f7c9e4b1c01aa.json",
+  "parameterValues" : [ "firefox-96.0.3" ]
+}
