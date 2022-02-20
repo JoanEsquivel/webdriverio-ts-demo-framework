@@ -51,13 +51,13 @@ describe('Assertions - Element Matchers', () => {
         await expect(link).toHaveText('Home')
     })
 
-    it('To have text', async ()=>{
+    it('To have text contaning', async ()=>{
         await browser.url('https://demoqa.com/links')
         const link = await $('#simpleLink')
         await expect(link).toHaveTextContaining('me')
     })
 
-    it.only('To be elements array of size', async ()=>{
+    it('To be elements array of size', async ()=>{
         await browser.url('https://demoqa.com/links')
         const links = await $$('a')
         await expect(links).toBeElementsArrayOfSize(13)
