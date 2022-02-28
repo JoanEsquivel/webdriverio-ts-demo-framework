@@ -11,6 +11,10 @@ export const config: WebdriverIO.Config = {
     // Define which test specs should run. The pattern is relative to the directory
     // from which `wdio` was called.
     //
+    //Server Configurations:
+    hostname: 'localhost',
+    port: 4444,
+    path: '/',
     // The specs are defined as an array of spec files (optionally using wildcards
     // that will be expanded). The test for each spec file will be run in a separate
     // worker process. In order to have a group of spec files run in the same worker
@@ -55,7 +59,7 @@ export const config: WebdriverIO.Config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 1,
+        maxInstances: 2,
         //
         browserName: 'chrome',
         // 'goog:chromeOptions': {
@@ -67,40 +71,40 @@ export const config: WebdriverIO.Config = {
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
     },
-    // {
+    {
 
-    //     // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-    //     // grid with only 5 firefox instances available you can make sure that not more than
-    //     // 5 instances get started at a time.
-    //     maxInstances: 1,
-    //     //
-    //     browserName: 'firefox',
-    //     // 'moz:firefoxOptions': {
-    //     //     args: ['-headless']
-    //     // },
-    //     acceptInsecureCerts: true
-    //     // If outputDir is provided WebdriverIO can capture driver session logs
-    //     // it is possible to configure which logTypes to include/exclude.
-    //     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-    //     // excludeDriverLogs: ['bugreport', 'server'],
-    // },
-    // {
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instances available you can make sure that not more than
+        // 5 instances get started at a time.
+        maxInstances: 2,
+        //
+        browserName: 'firefox',
+        // 'moz:firefoxOptions': {
+        //     args: ['-headless']
+        // },
+        acceptInsecureCerts: true
+        // If outputDir is provided WebdriverIO can capture driver session logs
+        // it is possible to configure which logTypes to include/exclude.
+        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        // excludeDriverLogs: ['bugreport', 'server'],
+    },
+    {
 
-    //     // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-    //     // grid with only 5 firefox instances available you can make sure that not more than
-    //     // 5 instances get started at a time.
-    //     maxInstances: 1,
-    //     //
-    //     browserName: 'MicrosoftEdge',
-    //     // 'moz:firefoxOptions': {
-    //     //     args: ['-headless']
-    //     // },
-    //     acceptInsecureCerts: true
-    //     // If outputDir is provided WebdriverIO can capture driver session logs
-    //     // it is possible to configure which logTypes to include/exclude.
-    //     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-    //     // excludeDriverLogs: ['bugreport', 'server'],
-    // }
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instances available you can make sure that not more than
+        // 5 instances get started at a time.
+        maxInstances: 2,
+        //
+        browserName: 'MicrosoftEdge',
+        // 'moz:firefoxOptions': {
+        //     args: ['-headless']
+        // },
+        acceptInsecureCerts: true
+        // If outputDir is provided WebdriverIO can capture driver session logs
+        // it is possible to configure which logTypes to include/exclude.
+        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        // excludeDriverLogs: ['bugreport', 'server'],
+    }
 ],
     //
     // ===================
@@ -149,7 +153,7 @@ export const config: WebdriverIO.Config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone'],
+    services: ['docker'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

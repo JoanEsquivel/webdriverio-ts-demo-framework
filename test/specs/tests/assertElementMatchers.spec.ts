@@ -60,7 +60,7 @@ describe('Assertions - Element Matchers', () => {
     it('To be elements array of size', async ()=>{
         await browser.url('https://demoqa.com/links')
         const links = await $$('a')
-        await expect(links).toBeElementsArrayOfSize(13)
+        await expect(links).toBeElementsArrayOfSize(12)
         await expect(links).toBeElementsArrayOfSize({ lte: 20 })
         await expect(links).toBeElementsArrayOfSize({ gte:5 })
 

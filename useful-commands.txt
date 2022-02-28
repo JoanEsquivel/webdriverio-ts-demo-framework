@@ -1,0 +1,4 @@
+Allure Commands:
+npm install -g allure-commandline --save-dev
+allure generate ./folder
+allure open
