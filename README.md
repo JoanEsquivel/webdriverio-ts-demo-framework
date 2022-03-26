@@ -13,6 +13,13 @@ We reviewed topics like:
 - [x] First Test: Async/Await first commands
 - [x] Page Object Model 
 - [x] Selenium-standalone-service
+
+YT Branc
+- [x] Docker Selenium Grid 4
+- [x] Allure reporter
+- [x] Assertions
+- [x] Locators/Selectors
+- [x] Tab Management  
  
 - ## 💻 Pre-requisites
 
